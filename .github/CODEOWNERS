@@ -1,0 +1,6 @@
+## Default reviews
+* @AndrejOrsula
+
+## Domain-specific reviews
+src/algorithms/robot_learning.md @AndrejOrsula
+src/applications/assembly_servicing.md @AndrejOrsula

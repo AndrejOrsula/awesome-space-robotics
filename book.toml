@@ -1,0 +1,10 @@
+[book]
+title = "Awesome Space Robotics"
+description = "A curated list of resources for Space Robotics"
+authors = ["Andrej Orsula", "Space Robotics Community"]
+language = "en"
+
+[output.html]
+site-url = "/awesome-space-robotics/"
+git-repository-url = "https://github.com/AndrejOrsula/awesome-space-robotics"
+edit-url-template = "https://github.com/AndrejOrsula/awesome-space-robotics/edit/main/{path}"
