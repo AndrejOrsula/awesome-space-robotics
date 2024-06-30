@@ -1,1 +1,4 @@
 # Software Frameworks
+
+- [Robot Operating System (ROS)](https://www.ros.org) - Middleware framework for robotics with a set of libraries and tools for building robot applications. It has a wide adoption in the robotics community.
+  - [Space ROS](https://space.ros.org) - Fork of ROS 2 that aims to align with the safety and reliability requirements of space missions.
