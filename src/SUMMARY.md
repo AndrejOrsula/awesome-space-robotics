@@ -7,6 +7,7 @@ ______________________________________________________________________
 - [Hardware Platforms](systems/hardware_platforms.md)
 - [Software Frameworks](systems/software_frameworks.md)
 - [Simulation Environments](systems/simulation_environments.md)
+- [Verification & Validation](systems/verification_and_validation.md)
 
 # Algorithms
 
