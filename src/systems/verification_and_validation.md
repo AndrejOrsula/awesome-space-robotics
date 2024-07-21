@@ -11,3 +11,5 @@
 - [LunaLab](https://www.uni.lu/snt-en/facilities/lunalab) - Moon analogue facility at the University of Luxembourg. It features an indoor 11x7 m area filled with 20 t of basalt gravel to emulate the surface of the Moon. LunaLab is equipped with adjustable illumination and a motion capture system to support the development and testing of lunar rovers.
 
 ## Terrestrial Analogue Sites
+
+- [Mount Etna (Italy)](https://en.wikipedia.org/wiki/Mount_Etna) - Active volcano with fresh volcanic soils and lava flows, serving as an excellent analogue for the Moon and Mars. ESA and DLR have tested several rovers and robotic operations at this site.
