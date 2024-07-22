@@ -18,11 +18,15 @@ concurrency:
   group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
   cancel-in-progress: true
 
+env:
+  MDBOOK_VERSION: "latest"
+  MDBOOK_PANDOC_VERSION: "v0.7.0"
+  PANDOC_VERSION: "3.2"
+
 jobs:
   build:
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
-    env:
-      MDBOOK_VERSION: "latest"
     steps:
       - uses: actions/checkout@v4
       - name: Setup mdBook
@@ -36,9 +40,69 @@ jobs:
         with:
           path: book
 
+  build_with_pdf:
+    if: ${{ github.event_name != 'pull_request' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v2
+        with:
+          mdbook-version: ${{ env.MDBOOK_VERSION }}
+      - name: Setup mdbook-pandoc
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/max-heller/mdbook-pandoc/releases/download/${{ env.MDBOOK_PANDOC_VERSION }}/mdbook-pandoc-installer.sh | sh
+      - name: Setup pandoc
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf https://github.com/jgm/pandoc/releases/download/${{ env.PANDOC_VERSION }}/pandoc-${{ env.PANDOC_VERSION }}-linux-amd64.tar.gz | tar zxf -
+          echo "$PWD/pandoc-${{ env.PANDOC_VERSION }}/bin" >> $GITHUB_PATH
+          export PATH="$PWD/pandoc-${{ env.PANDOC_VERSION }}/bin:$PATH"
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: |
+            etoolbox
+            fourier
+            scheme-basic
+            utopia
+            xcolor
+      - name: Configure PDF output
+        run: |
+          cat >> book.toml << EOF
+          [output.pandoc]
+          hosted-html = "https://andrejorsula.github.io/awesome-space-robotics"
+
+          [output.pandoc.profile.pdf]
+          output-file = "awesome-space-robotics.pdf"
+          table-of-contents = false
+          number-sections = false
+
+          [output.pandoc.profile.pdf.variables]
+          title = ""
+          title-meta = "Awesome Space Robotics"
+          documentclass = "book"
+          classoption = ["oneside"]
+          papersize = "a4"
+          margin-left = "2.5cm"
+          margin-right = "2.5cm"
+          margin-top = "2.5cm"
+          margin-bottom = "2.5cm"
+          fontfamily = "fourier"
+          fontsize = "11pt"
+          colorlinks = true
+          EOF
+      - name: Build
+        run: mdbook build
+      - name: Include PDF in HTML output
+        run: cp book/pandoc/pdf/awesome-space-robotics.pdf book/html/awesome-space-robotics.pdf
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: book/html
+
   deploy:
     if: ${{ github.event_name != 'pull_request' }}
-    needs: build
+    needs: build_with_pdf
     runs-on: ubuntu-latest
     environment:
       name: github-pages
