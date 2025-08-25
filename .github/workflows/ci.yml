@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: mdbook build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: book
 
@@ -96,7 +96,7 @@ jobs:
       - name: Include PDF in HTML output
         run: cp book/pandoc/pdf/awesome-space-robotics.pdf book/html/awesome-space-robotics.pdf
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: book/html
 
