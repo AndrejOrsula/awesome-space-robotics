@@ -74,6 +74,7 @@
 
 - [core Flight System (cFS)](https://cfs.gsfc.nasa.gov) - NASA's platform-independent and mission-independent flight software framework.
 - [F´ (F-Prime)](https://fprime.jpl.nasa.gov) - Component-driven framework for spaceflight applications and embedded systems with limited resources.
+- [ISAAC](https://github.com/nasa/isaac) - NASA's Integrated System for Autonomous and Adaptive Caretaking, combining Astrobee robotics with inspection, mapping, anomaly detection, planning, and coordinated execution.
 
 - [Yamcs](https://yamcs.org) - Open source mission control framework for command and control of spacecraft, satellites, payloads, and ground equipment.
 
