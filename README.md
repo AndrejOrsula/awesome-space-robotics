@@ -219,6 +219,10 @@
 
 ## Education
 
+### Learning Resources
+
+- [Awesome Space Autonomy](https://github.com/sylvesterkaczmarek/awesome-space-autonomy) - Curated research, flight demonstrations, software, tools, and guidance for autonomous spacecraft and space robots.
+
 ### Study Programmes
 
 - [Erasmus Mundus — SpaceMaster](https://spacemaster.eu) - Joint European master's degree in space science and technology offered by a consortium of European universities.
