@@ -144,6 +144,7 @@
 ### Planetary Navigation
 
 - [Enhanced Autonomous Navigation (ENav)](https://doi.org/10.1109/TFR.2025.3636366) - Enhanced Navigation system used on NASA's Perseverance rover.
+- [NeBula Autonomy Suite](https://robotics.jpl.nasa.gov/how-we-do-it/systems/nebula-autonomy-suite/) - JPL autonomy suite for risk-aware navigation, mapping, decision-making, and multi-robot exploration in unknown and extreme environments.
 - [Terrain Relative Navigation (TRN)](https://www.nasa.gov/space-technology-mission-directorate/tdm/terrain-relative-navigation-trn) - NASA's Lander Vision System developed for Mars 2020.
 
 ### Orbital Navigation
