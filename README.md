@@ -81,6 +81,7 @@
 ### Mission Planning
 
 - [GMAT](https://gmat.atlassian.net/wiki/spaces/GW/overview) - General Mission Analysis Tool, NASA's open source space mission design tool for trajectory optimization and mission planning.
+- [PLEXIL](https://sourceforge.net/projects/plexil/) - NASA plan representation and execution language for reliable automation of spacecraft and robotic operations.
 - [SPICE Toolkit](https://naif.jpl.nasa.gov/naif/toolkit.html) - NASA's observation geometry system used for space science mission planning and data analysis.
 
 ## Simulation Environments
