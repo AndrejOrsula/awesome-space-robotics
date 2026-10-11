@@ -74,12 +74,14 @@
 
 - [core Flight System (cFS)](https://cfs.gsfc.nasa.gov) - NASA's platform-independent and mission-independent flight software framework.
 - [F´ (F-Prime)](https://fprime.jpl.nasa.gov) - Component-driven framework for spaceflight applications and embedded systems with limited resources.
+- [ISAAC](https://github.com/nasa/isaac) - NASA's Integrated System for Autonomous and Adaptive Caretaking, combining Astrobee robotics with inspection, mapping, anomaly detection, planning, and coordinated execution.
 
 - [Yamcs](https://yamcs.org) - Open source mission control framework for command and control of spacecraft, satellites, payloads, and ground equipment.
 
 ### Mission Planning
 
 - [GMAT](https://gmat.atlassian.net/wiki/spaces/GW/overview) - General Mission Analysis Tool, NASA's open source space mission design tool for trajectory optimization and mission planning.
+- [PLEXIL](https://sourceforge.net/projects/plexil/) - NASA plan representation and execution language for reliable automation of spacecraft and robotic operations.
 - [SPICE Toolkit](https://naif.jpl.nasa.gov/naif/toolkit.html) - NASA's observation geometry system used for space science mission planning and data analysis.
 
 ## Simulation Environments
@@ -105,6 +107,10 @@
 - [Trick](https://github.com/nasa/trick) - NASA's simulation development framework that provides common simulation capabilities for rapid prototyping of space vehicle simulations.
 
 ## Verification & Validation
+
+### Assurance Resources
+
+- [Awesome Assured Autonomy](https://github.com/sylvesterkaczmarek/awesome-assured-autonomy) - Curated research, tools, benchmarks, standards, and open-source systems for assuring autonomous and learning-enabled systems.
 
 ### Terrestrial Analogue Sites
 
@@ -139,6 +145,7 @@
 ### Planetary Navigation
 
 - [Enhanced Autonomous Navigation (ENav)](https://doi.org/10.1109/TFR.2025.3636366) - Enhanced Navigation system used on NASA's Perseverance rover.
+- [NeBula Autonomy Suite](https://robotics.jpl.nasa.gov/how-we-do-it/systems/nebula-autonomy-suite/) - JPL autonomy suite for risk-aware navigation, mapping, decision-making, and multi-robot exploration in unknown and extreme environments.
 - [Terrain Relative Navigation (TRN)](https://www.nasa.gov/space-technology-mission-directorate/tdm/terrain-relative-navigation-trn) - NASA's Lander Vision System developed for Mars 2020.
 
 ### Orbital Navigation
@@ -214,6 +221,10 @@
 - [RSGS](https://www.darpa.mil/program/robotic-servicing-of-geosynchronous-satellites) - Robotic Servicing of Geosynchronous Satellites, a DARPA program to develop a robotic servicing vehicle for GEO satellites.
 
 ## Education
+
+### Learning Resources
+
+- [Awesome Space Autonomy](https://github.com/sylvesterkaczmarek/awesome-space-autonomy) - Curated research, flight demonstrations, software, tools, and guidance for autonomous spacecraft and space robots.
 
 ### Study Programmes
 
